@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-const {  OpenAIApi,Configuration } = require("openai");
+import {  OpenAIApi,Configuration } from "openai";
 
 @Injectable()
 export class ImageGenerationService {
 
     async getAvatar(text : string) : Promise<any> {
-     
+     console.log(text)
         const configuration = new Configuration({
           apiKey: process.env.OPENAI_API_KEY,
         });
